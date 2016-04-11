@@ -18,13 +18,12 @@ public class ExampleController {
     private DemoTableDao demoTableDao;
 
     @RequestMapping(value = "index")
-    @ResponseBody
     public String index() {
         System.out.println(demoTableDao);
         System.out.println(demoTableDao.count());
         System.out.println(demoTableDao.findByName("text1"));
         System.out.println(demoTableDao.findByNameKey("t"));
-        return "this is index controller";
+        return "/example/index";
     }
 
 }
